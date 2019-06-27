@@ -3,7 +3,7 @@
 "
 "		Author:			sblauen <s@blauen.dev>
 "		Created:		18 May 2019
-"		Updated:		18 June 2019
+"		Updated:		27 June 2019
 " ------------------------------------------------------------------------------
 
 " Settings
@@ -42,3 +42,10 @@ hi StatusLine		ctermfg=235		ctermbg=250		cterm=none		guifg=#262626	guibg=#bcbcbc
 hi StatusLineNC		ctermfg=250		ctermbg=238		cterm=none		guifg=#bcbcbc	guibg=#444444	gui=none
 
 hi! link MoreMsg ModeMsg
+
+" Popup menu
+" ------------------------------------------------------------------------------
+hi Pmenu			ctermfg=250		ctermbg=237		cterm=none		guifg=#bcbcbc	guibg=#3a3a3a	gui=none
+hi PmenuSel			ctermfg=237		ctermbg=250		cterm=none		guifg=#3a3a3a	guibg=#bcbcbc	gui=none
+hi PmenuSbar		ctermfg=none	ctermbg=237		cterm=none		guifg=none		guibg=#3a3a3a	gui=none
+hi PmenuThumb		ctermfg=none	ctermbg=238		cterm=none		guifg=none		guibg=#444444	gui=none
