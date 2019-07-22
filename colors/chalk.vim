@@ -3,7 +3,7 @@
 "
 "		Author:			sblauen <s@blauen.dev>
 "		Created:		18 May 2019
-"		Updated:		27 June 2019
+"		Updated:		22 July 2019
 " ------------------------------------------------------------------------------
 
 " Settings
@@ -49,3 +49,13 @@ hi Pmenu			ctermfg=250		ctermbg=237		cterm=none		guifg=#bcbcbc	guibg=#3a3a3a	gui
 hi PmenuSel			ctermfg=237		ctermbg=250		cterm=none		guifg=#3a3a3a	guibg=#bcbcbc	gui=none
 hi PmenuSbar		ctermfg=none	ctermbg=237		cterm=none		guifg=none		guibg=#3a3a3a	gui=none
 hi PmenuThumb		ctermfg=none	ctermbg=238		cterm=none		guifg=none		guibg=#444444	gui=none
+
+" Higlights
+" ------------------------------------------------------------------------------
+hi Search			ctermfg=235		ctermbg=145		cterm=none		guifg=#262626	guibg=#afafaf	gui=none
+hi IncSearch		ctermfg=235		ctermbg=231		cterm=none		guifg=#262626	guibg=#ffffff	gui=none
+hi MatchParen		ctermfg=250		ctermbg=245		cterm=none		guifg=#bcbcbc	guibg=#8a8a8a	gui=none
+hi SpellBad			ctermfg=255		ctermbg=173		cterm=none		guifg=#eeeeee	guibg=#d7875f	gui=none
+hi SpellCap			ctermfg=255		ctermbg=110		cterm=none		guifg=#eeeeee	guibg=#87afd7	gui=none
+hi SpellRare		ctermfg=255		ctermbg=108		cterm=none		guifg=#eeeeee	guibg=#87af87	gui=none
+hi SpellLocal		ctermfg=255		ctermbg=222		cterm=none		guifg=#eeeeee	guibg=#ffd787	gui=none
