@@ -59,3 +59,12 @@ hi SpellBad			ctermfg=255		ctermbg=173		cterm=none		guifg=#eeeeee	guibg=#d7875f	
 hi SpellCap			ctermfg=255		ctermbg=110		cterm=none		guifg=#eeeeee	guibg=#87afd7	gui=none
 hi SpellRare		ctermfg=255		ctermbg=108		cterm=none		guifg=#eeeeee	guibg=#87af87	gui=none
 hi SpellLocal		ctermfg=255		ctermbg=222		cterm=none		guifg=#eeeeee	guibg=#ffd787	gui=none
+
+" Diff mode
+" ------------------------------------------------------------------------------
+hi DiffAdd			ctermfg=235		ctermbg=72		cterm=none		guifg=#262626	guibg=#5faf87	gui=none
+hi DiffAdded		ctermfg=72		ctermbg=none	cterm=none		guifg=#5faf87	guibg=none		gui=none
+hi DIffChange		ctermfg=235		ctermbg=67		cterm=none		guifg=#262626	guibg=#5f87af	gui=none
+hi DiffDelete		ctermfg=235		ctermbg=167		cterm=none		guifg=#262626	guibg=#d75f5f	gui=none
+hi DiffText			ctermfg=235		ctermbg=222		cterm=none		guifg=#262626	guibg=#ffd787	gui=none
+hi DiffRemoved		ctermfg=167		ctermbg=none	cterm=none		guifg=#d75f5f	guibg=none		gui=none
