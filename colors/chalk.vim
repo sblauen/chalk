@@ -3,7 +3,7 @@
 "
 "		Author:			sblauen <s@blauen.dev>
 "		Created:		18 May 2019
-"		Updated:		22 July 2019
+"		Updated:		23 July 2019
 " ------------------------------------------------------------------------------
 
 " Settings
@@ -72,3 +72,68 @@ hi DiffRemoved		ctermfg=167		ctermbg=none	cterm=none		guifg=#d75f5f	guibg=none		
 " Listing
 " ------------------------------------------------------------------------------
 hi Directory		ctermfg=108		ctermbg=none	cterm=none		guifg=#87af87	guibg=none		gui=none
+
+" Syntax
+" ------------------------------------------------------------------------------
+hi Comment			ctermfg=240		ctermbg=none	cterm=none		guifg=#585858	guibg=none		gui=none
+hi Ignore			ctermfg=240		ctermbg=none	cterm=none		guifg=#585858	guibg=none		gui=none
+hi Title			ctermfg=222		ctermbg=none	cterm=none		guibg=#ffd787	guibg=none		gui=none
+hi Underlined		ctermfg=81		ctermbg=none	cterm=underline	guibg=#5fd7ff	guibg=none		gui=underline
+
+" Syntax constants
+" ------------------------------------------------------------------------------
+hi Constant			ctermfg=222		ctermbg=none	cterm=none		guifg=#ffd787	guibg=none		gui=none
+hi Character		ctermfg=30		ctermbg=none	cterm=none		guifg=#008787	guibg=none		gui=none
+hi Number			ctermfg=173		ctermbg=none	cterm=none		guifg=#d7875f	guibg=none		gui=none
+
+hi! link Boolean		Constant
+hi! link String			Constant
+hi! link Float			Number
+
+" Syntax identifiers
+" ------------------------------------------------------------------------------
+hi Identifier		ctermfg=108		ctermbg=none	cterm=none		guifg=#87af87	guibg=none		gui=none
+
+hi! link Function		Identifier
+
+" Syntax statements
+" ------------------------------------------------------------------------------
+hi Statement		ctermfg=131		ctermbg=none	cterm=none		guifg=#af5f5f	guibg=none		gui=none
+hi Label			ctermfg=138		ctermbg=none	cterm=none		guifg=#af8787	guibg=none		gui=none
+hi Keyword			ctermfg=108		ctermbg=none	cterm=none		guifg=#87af87	guibg=none		gui=none
+hi Operator			ctermfg=254		ctermbg=none	cterm=none		guifg=#e4e4e4	guibg=none		gui=none
+
+hi! link Conditional	Statement
+hi! link Repeat			Statement
+
+" Syntax preprocessors
+" ------------------------------------------------------------------------------
+hi PreProc			ctermfg=250		ctermbg=none	cterm=none		guifg=#bcbcbc	guibg=none		gui=none
+
+hi! link Define			PreProc
+hi! link Include		PreProc
+hi! link Macro			PreProc
+hi! link PreCondit		PreProc
+
+" Syntax types
+" ------------------------------------------------------------------------------
+hi Type				ctermfg=67		ctermbg=none	cterm=none		guifg=#5f87af	guibg=none		gui=none
+hi StorageClass		ctermfg=110		ctermbg=none	cterm=none		guifg=#87afd7	guibg=none		gui=none
+
+hi! link Structure		Type
+hi! link Typedef		Type
+
+" Syntax Specials
+" ------------------------------------------------------------------------------
+hi Special			ctermfg=103		ctermbg=none	cterm=none		guifg=#8787af	guibg=none		gui=none
+hi SpecialChar		ctermfg=96		ctermbg=none	cterm=none		guifg=#875f87	guibg=none		gui=none
+hi Tag				ctermfg=none	ctermbg=none	cterm=underline	guifg=none		guibg=none		gui=underline
+hi Delimiter		ctermfg=246		ctermbg=none	cterm=none		guifg=#949494	guibg=none		gui=none
+
+hi! link SpecialComment	Special
+hi! link Debug			Special
+
+" Syntax highlights
+" ------------------------------------------------------------------------------
+hi Error			ctermfg=255		ctermbg=167		cterm=none		guifg=#eeeeee	guibg=#d75f5f	gui=none
+hi Todo				ctermfg=235		ctermbg=222		cterm=none		guifg=#eeeeee	guibg=#ffd787	gui=none
