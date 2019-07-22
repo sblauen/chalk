@@ -51,6 +51,10 @@ hi PmenuSel			ctermfg=237		ctermbg=250		cterm=none		guifg=#3a3a3a	guibg=#bcbcbc	
 hi PmenuSbar		ctermfg=none	ctermbg=237		cterm=none		guifg=none		guibg=#3a3a3a	gui=none
 hi PmenuThumb		ctermfg=none	ctermbg=238		cterm=none		guifg=none		guibg=#444444	gui=none
 
+" Wildmenu
+" ------------------------------------------------------------------------------
+hi Wildmenu			ctermfg=255		ctermbg=67		cterm=none		guifg=#eeeeee	guibg=#5f87af	gui=none
+
 " Higlights
 " ------------------------------------------------------------------------------
 hi Search			ctermfg=235		ctermbg=145		cterm=none		guifg=#262626	guibg=#afafaf	gui=none
