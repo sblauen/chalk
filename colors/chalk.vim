@@ -68,3 +68,7 @@ hi DIffChange		ctermfg=235		ctermbg=67		cterm=none		guifg=#262626	guibg=#5f87af	
 hi DiffDelete		ctermfg=235		ctermbg=167		cterm=none		guifg=#262626	guibg=#d75f5f	gui=none
 hi DiffText			ctermfg=235		ctermbg=222		cterm=none		guifg=#262626	guibg=#ffd787	gui=none
 hi DiffRemoved		ctermfg=167		ctermbg=none	cterm=none		guifg=#d75f5f	guibg=none		gui=none
+
+" Listing
+" ------------------------------------------------------------------------------
+hi Directory		ctermfg=108		ctermbg=none	cterm=none		guifg=#87af87	guibg=none		gui=none
