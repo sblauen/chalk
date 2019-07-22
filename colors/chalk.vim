@@ -40,6 +40,7 @@ hi ModeMsg			ctermfg=250		ctermbg=none	cterm=bold		guifg=#bcbcbc	guibg=none		gui
 hi Question			ctermfg=110		ctermbg=none	cterm=none		guifg=#87afd7	guibg=none		gui=none
 hi StatusLine		ctermfg=235		ctermbg=250		cterm=none		guifg=#262626	guibg=#bcbcbc	gui=none
 hi StatusLineNC		ctermfg=250		ctermbg=238		cterm=none		guifg=#bcbcbc	guibg=#444444	gui=none
+hi WarningMsg		ctermfg=222		ctermbg=none	cterm=none		guifg=#ffd787	guibg=none		gui=none
 
 hi! link MoreMsg ModeMsg
 
