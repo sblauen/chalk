@@ -1,9 +1,16 @@
+" Chalk -- A vim color scheme
 "
-"			Chalk -- Vim color scheme
+" Copyright 2019 S. Blauen
 "
-"		Author:			sblauen <s@blauen.dev>
-"		Created:		18 May 2019
-"		Updated:		23 July 2019
+" This file is part of Chalk. You can redistribute Chalk and/or modify
+" it under the terms of the 3-clause BSD License (see LICENSE).
+" Chalk is distributed in the hope that it will be useful, but without
+" any warranty; without even the implied warranty of merchantability or
+" fitness for a particular purpose.
+"
+" Author:	sblauen (s@blauen.dev)
+" Created:	18 May 2019
+" Updated:	23 July 2019
 " ------------------------------------------------------------------------------
 
 " Settings
