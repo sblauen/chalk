@@ -10,7 +10,7 @@
 "
 " Author:	sblauen (s@blauen.dev)
 " Created:	18 May 2019
-" Updated:	23 July 2019
+" Updated:	13 May 2020
 " ------------------------------------------------------------------------------
 
 " Settings
@@ -35,6 +35,7 @@ hi CursorLineNr		ctermfg=250		ctermbg=237		cterm=NONE		guifg=#bcbcbc	guibg=#3a3a
 hi Visual			ctermfg=NONE	ctermbg=59		cterm=NONE		guifg=NONE		guibg=#5f5f5f	gui=NONE
 
 hi! link CursorLine		CursorColumn
+hi! link ColorColumn	CursorColumn
 hi! link FoldColumn		Normal
 hi! link NonText		LineNr
 hi! link SpecialKey		LineNr
