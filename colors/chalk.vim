@@ -99,7 +99,7 @@ hi Directory		ctermfg=108		ctermbg=NONE	cterm=NONE		guifg=#87af87	guibg=NONE		gu
 " ------------------------------------------------------------------------------
 hi Comment			ctermfg=242		ctermbg=NONE	cterm=NONE		guifg=#6c6c6c	guibg=NONE		gui=NONE
 hi Ignore			ctermfg=240		ctermbg=NONE	cterm=NONE		guifg=#585858	guibg=NONE		gui=NONE
-hi Title			ctermfg=222		ctermbg=NONE	cterm=NONE		guibg=#ffd787	guibg=NONE		gui=NONE
+hi Title			ctermfg=108		ctermbg=NONE	cterm=NONE		guibg=#87af87	guibg=NONE		gui=NONE
 hi Underlined		ctermfg=81		ctermbg=NONE	cterm=UNDERLINE	guibg=#5fd7ff	guibg=NONE		gui=UNDERLINE
 
 " Syntax constants
