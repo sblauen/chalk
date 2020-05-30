@@ -46,8 +46,8 @@ hi! link VertSplit		LineNr
 hi ErrorMsg			ctermfg=167		ctermbg=NONE	cterm=NONE		guifg=#d75f5f	guibg=NONE		gui=NONE
 hi ModeMsg			ctermfg=250		ctermbg=NONE	cterm=bold		guifg=#bcbcbc	guibg=NONE		gui=NONE
 hi Question			ctermfg=110		ctermbg=NONE	cterm=NONE		guifg=#87afd7	guibg=NONE		gui=NONE
-hi StatusLine		ctermfg=235		ctermbg=250		cterm=NONE		guifg=#262626	guibg=#bcbcbc	gui=NONE
-hi StatusLineNC		ctermfg=250		ctermbg=238		cterm=NONE		guifg=#bcbcbc	guibg=#444444	gui=NONE
+hi StatusLine		ctermfg=234		ctermbg=247		cterm=NONE		guifg=#1c1c1c	guibg=#9e9e9e	gui=NONE
+hi StatusLineNC		ctermfg=248		ctermbg=238		cterm=NONE		guifg=#a8a8a8	guibg=#444444	gui=NONE
 hi WarningMsg		ctermfg=222		ctermbg=NONE	cterm=NONE		guifg=#ffd787	guibg=NONE		gui=NONE
 
 hi! link MoreMsg ModeMsg
