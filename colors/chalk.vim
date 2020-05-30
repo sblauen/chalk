@@ -74,7 +74,7 @@ hi Wildmenu			ctermfg=250		ctermbg=238		cterm=NONE		guifg=#bcbcbc	guibg=#444444	
 
 " Higlights
 " ------------------------------------------------------------------------------
-hi Search			ctermfg=235		ctermbg=145		cterm=NONE		guifg=#262626	guibg=#afafaf	gui=NONE
+hi Search			ctermfg=NONE	ctermbg=NONE	cterm=REVERSE	guifg=NONE		guibg=NONE		gui=REVERSE
 hi IncSearch		ctermfg=235		ctermbg=231		cterm=NONE		guifg=#262626	guibg=#ffffff	gui=NONE
 hi MatchParen		ctermfg=250		ctermbg=245		cterm=NONE		guifg=#bcbcbc	guibg=#8a8a8a	gui=NONE
 hi SpellBad			ctermfg=255		ctermbg=173		cterm=NONE		guifg=#eeeeee	guibg=#d7875f	gui=NONE
