@@ -148,10 +148,10 @@ hi! link Typedef		Type
 " Syntax Specials
 " ------------------------------------------------------------------------------
 hi Special			ctermfg=103		ctermbg=NONE	cterm=NONE		guifg=#8787af	guibg=NONE		gui=NONE
-hi SpecialChar		ctermfg=96		ctermbg=NONE	cterm=NONE		guifg=#875f87	guibg=NONE		gui=NONE
 hi Tag				ctermfg=NONE	ctermbg=NONE	cterm=UNDERLINE	guifg=NONE		guibg=NONE		gui=UNDERLINE
 hi Delimiter		ctermfg=246		ctermbg=NONE	cterm=NONE		guifg=#949494	guibg=NONE		gui=NONE
 
+hi! link SpecialChar	Special
 hi! link SpecialComment	Special
 hi! link Debug			Special
 
