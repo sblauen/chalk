@@ -52,6 +52,12 @@ hi WarningMsg		ctermfg=222		ctermbg=NONE	cterm=NONE		guifg=#ffd787	guibg=NONE		g
 
 hi! link MoreMsg ModeMsg
 
+" Tab line
+" ------------------------------------------------------------------------------
+hi! link TabLineSel		StatusLine
+hi! link TabLine		StatusLineNC
+hi! link TabLineFill	TabLine
+
 " Popup menu
 " ------------------------------------------------------------------------------
 hi Pmenu			ctermfg=250		ctermbg=237		cterm=NONE		guifg=#bcbcbc	guibg=#3a3a3a	gui=NONE
