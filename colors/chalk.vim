@@ -44,7 +44,7 @@ hi! link VertSplit		LineNr
 " Status line
 " ------------------------------------------------------------------------------
 hi ErrorMsg			ctermfg=167		ctermbg=NONE	cterm=NONE		guifg=#d75f5f	guibg=NONE		gui=NONE
-hi ModeMsg			ctermfg=250		ctermbg=NONE	cterm=bold		guifg=#bcbcbc	guibg=NONE		gui=NONE
+hi ModeMsg			ctermfg=250		ctermbg=NONE	cterm=BOLD		guifg=#bcbcbc	guibg=NONE		gui=BOLD
 hi Question			ctermfg=110		ctermbg=NONE	cterm=NONE		guifg=#87afd7	guibg=NONE		gui=NONE
 hi StatusLine		ctermfg=234		ctermbg=247		cterm=NONE		guifg=#1c1c1c	guibg=#9e9e9e	gui=NONE
 hi StatusLineNC		ctermfg=248		ctermbg=238		cterm=NONE		guifg=#a8a8a8	guibg=#444444	gui=NONE
@@ -100,7 +100,7 @@ hi Directory		ctermfg=108		ctermbg=NONE	cterm=NONE		guifg=#87af87	guibg=NONE		gu
 hi Comment			ctermfg=240		ctermbg=NONE	cterm=NONE		guifg=#585858	guibg=NONE		gui=NONE
 hi Ignore			ctermfg=240		ctermbg=NONE	cterm=NONE		guifg=#585858	guibg=NONE		gui=NONE
 hi Title			ctermfg=222		ctermbg=NONE	cterm=NONE		guibg=#ffd787	guibg=NONE		gui=NONE
-hi Underlined		ctermfg=81		ctermbg=NONE	cterm=underline	guibg=#5fd7ff	guibg=NONE		gui=underline
+hi Underlined		ctermfg=81		ctermbg=NONE	cterm=UNDERLINE	guibg=#5fd7ff	guibg=NONE		gui=UNDERLINE
 
 " Syntax constants
 " ------------------------------------------------------------------------------
@@ -149,7 +149,7 @@ hi! link Typedef		Type
 " ------------------------------------------------------------------------------
 hi Special			ctermfg=103		ctermbg=NONE	cterm=NONE		guifg=#8787af	guibg=NONE		gui=NONE
 hi SpecialChar		ctermfg=96		ctermbg=NONE	cterm=NONE		guifg=#875f87	guibg=NONE		gui=NONE
-hi Tag				ctermfg=NONE	ctermbg=NONE	cterm=underline	guifg=NONE		guibg=NONE		gui=underline
+hi Tag				ctermfg=NONE	ctermbg=NONE	cterm=UNDERLINE	guifg=NONE		guibg=NONE		gui=UNDERLINE
 hi Delimiter		ctermfg=246		ctermbg=NONE	cterm=NONE		guifg=#949494	guibg=NONE		gui=NONE
 
 hi! link SpecialComment	Special
