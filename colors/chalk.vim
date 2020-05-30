@@ -105,11 +105,11 @@ hi Underlined		ctermfg=81		ctermbg=NONE	cterm=UNDERLINE	guibg=#5fd7ff	guibg=NONE
 " Syntax constants
 " ------------------------------------------------------------------------------
 hi Constant			ctermfg=222		ctermbg=NONE	cterm=NONE		guifg=#ffd787	guibg=NONE		gui=NONE
-hi Character		ctermfg=30		ctermbg=NONE	cterm=NONE		guifg=#008787	guibg=NONE		gui=NONE
 hi Number			ctermfg=173		ctermbg=NONE	cterm=NONE		guifg=#d7875f	guibg=NONE		gui=NONE
 
 hi! link Boolean		Constant
 hi! link String			Constant
+hi! link Character		Number
 hi! link Float			Number
 
 " Syntax identifiers
