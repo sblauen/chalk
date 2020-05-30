@@ -139,8 +139,8 @@ hi! link PreCondit		PreProc
 
 " Syntax types
 " ------------------------------------------------------------------------------
-hi Type				ctermfg=67		ctermbg=NONE	cterm=NONE		guifg=#5f87af	guibg=NONE		gui=NONE
-hi StorageClass		ctermfg=110		ctermbg=NONE	cterm=NONE		guifg=#87afd7	guibg=NONE		gui=NONE
+hi Type				ctermfg=110		ctermbg=NONE	cterm=NONE		guifg=#87afd7	guibg=NONE		gui=NONE
+hi StorageClass		ctermfg=67		ctermbg=NONE	cterm=NONE		guifg=#5f87af	guibg=NONE		gui=NONE
 
 hi! link Structure		Type
 hi! link Typedef		Type
