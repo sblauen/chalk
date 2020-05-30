@@ -70,7 +70,7 @@ hi PmenuThumb		ctermfg=NONE	ctermbg=238		cterm=NONE		guifg=NONE		guibg=#444444	g
 
 " Wildmenu
 " ------------------------------------------------------------------------------
-hi Wildmenu			ctermfg=255		ctermbg=67		cterm=NONE		guifg=#eeeeee	guibg=#5f87af	gui=NONE
+hi Wildmenu			ctermfg=250		ctermbg=238		cterm=NONE		guifg=#bcbcbc	guibg=#444444	gui=NONE
 
 " Higlights
 " ------------------------------------------------------------------------------
