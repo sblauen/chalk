@@ -1,6 +1,6 @@
 " Chalk -- A vim color scheme
 "
-" Copyright 2019 S. Blauen
+" Copyright 2019-2020 S. Blauen
 "
 " This file is part of Chalk. You can redistribute Chalk and/or modify
 " it under the terms of the 3-clause BSD License (see LICENSE).
@@ -8,154 +8,144 @@
 " any warranty; without even the implied warranty of merchantability or
 " fitness for a particular purpose.
 "
-" Author:	sblauen (s@blauen.dev)
-" Created:	18 May 2019
-" Updated:	13 May 2020
+" Author:   sblauen (s@blauen.dev)
+" Created:  18 May 2019
+" Updated:  05 June 2020
 " ------------------------------------------------------------------------------
 
-" Settings
-" ------------------------------------------------------------------------------
 set background=dark
 
 hi clear
 
 if exists("syntax_on")
-	syntax reset
+  syntax reset
 endif
 
 let g:colors_name = "chalk"
 
-" Generalities
-" ------------------------------------------------------------------------------
-hi Normal			ctermfg=250		ctermbg=235		cterm=NONE		guifg=#bcbcbc	guibg=#262626	gui=NONE
-hi CursorColumn		ctermfg=NONE	ctermbg=237		cterm=NONE		guifg=NONE		guibg=#3a3a3a	gui=NONE
-hi Folded			ctermfg=244		ctermbg=237		cterm=NONE		guifg=#808080	guibg=#3a3a3a	gui=NONE
-hi LineNr			ctermfg=238		ctermbg=NONE	cterm=NONE		guifg=#444444	guibg=NONE		gui=NONE
-hi CursorLineNr		ctermfg=250		ctermbg=237		cterm=NONE		guifg=#bcbcbc	guibg=#3a3a3a	gui=NONE
-hi Visual			ctermfg=NONE	ctermbg=59		cterm=NONE		guifg=NONE		guibg=#5f5f5f	gui=NONE
+let s:colors = {
+      \ "Grey37":          ["59",  "#5f5f5f"],
+      \ "SteelBlue":       ["67",  "#5f87af"],
+      \ "CadetBlue":       ["72",  "#5faf87"],
+      \ "SteelBlue1":      ["81",  "#5fd7ff"],
+      \ "LightSlateGrey":  ["103", "#8787af"],
+      \ "DarkSeaGreen":    ["108", "#87af87"],
+      \ "LightSkyBlue3":   ["110", "#87afd7"],
+      \ "IndianRed1":      ["131", "#af5f5f"],
+      \ "RosyBrown":       ["138", "#af8787"],
+      \ "IndianRed2":      ["167", "#d75f5f"],
+      \ "LightSalmon3":    ["173", "#d7875f"],
+      \ "LightGoldenrod3": ["222", "#ffd787"],
+      \ "Grey100":         ["231", "#ffffff"],
+      \ "Grey11":          ["234", "#1c1c1c"],
+      \ "Grey15":          ["235", "#262626"],
+      \ "Grey23":          ["237", "#3a3a3a"],
+      \ "Grey27":          ["238", "#444444"],
+      \ "Grey35":          ["240", "#585858"],
+      \ "Grey42":          ["242", "#6c6c6c"],
+      \ "Grey50":          ["244", "#808080"],
+      \ "Grey54":          ["245", "#8a8a8a"],
+      \ "Grey58":          ["246", "#949494"],
+      \ "Grey62":          ["247", "#9e9e9e"],
+      \ "Grey66":          ["248", "#a8a8a8"],
+      \ "Grey74":          ["250", "#bcbcbc"],
+      \ "Grey89":          ["254", "#e4e4e4"],
+      \ "Grey93":          ["255", "#eeeeee"],
+      \ "NONE":            ["NONE", "NONE"]
+      \}
 
-hi! link CursorLine		CursorColumn
-hi! link ColorColumn	CursorColumn
-hi! link FoldColumn		Normal
-hi! link NonText		LineNr
-hi! link SpecialKey		LineNr
-hi! link VertSplit		LineNr
+let s:highlights = {
+      \ "Normal":           ["Grey74",          "Grey15",          "NONE"],
+      \ "CursorColumn":     ["NONE",            "Grey23",          "NONE"],
+      \ "Folded":           ["Grey50",          "Grey23",          "NONE"],
+      \ "LineNr":           ["Grey27",          "NONE",            "NONE"],
+      \ "CursorLineNr":     ["Grey74",          "Grey23",          "NONE"],
+      \ "Visual":           ["NONE",            "Grey37",          "NONE"],
+      \ "ErrorMsg":         ["IndianRed2",      "NONE",            "NONE"],
+      \ "ModeMsg":          ["Grey74",          "NONE",            "BOLD"],
+      \ "Question":         ["LightSkyBlue3",   "NONE",            "NONE"],
+      \ "StatusLine":       ["Grey11",          "Grey62",          "NONE"],
+      \ "StatusLineNC":     ["Grey66",          "Grey27",          "NONE"],
+      \ "StatusLineTerm":   ["Grey11",          "DarkSeaGreen",    "NONE"],
+      \ "StatusLineTermNC": ["DarkSeaGreen",    "Grey27",          "NONE"],
+      \ "WarningMsg":       ["LightGoldenrod3", "NONE",            "NONE"],
+      \ "Pmenu":            ["Grey74",          "Grey23",          "NONE"],
+      \ "PmenuSel":         ["Grey23",          "Grey74",          "NONE"],
+      \ "PmenuSbar":        ["NONE",            "Grey23",          "NONE"],
+      \ "PmenuThumb":       ["NONE",            "Grey27",          "NONE"],
+      \ "Wildmenu":         ["Grey74",          "Grey27",          "NONE"],
+      \ "Search":           ["NONE",            "NONE",            "REVERSE"],
+      \ "IncSearch":        ["Grey15",          "Grey100",         "NONE"],
+      \ "MatchParen":       ["Grey74",          "Grey54",          "NONE"],
+      \ "SpellBad":         ["Grey93",          "LightSalmon3",    "NONE"],
+      \ "SpellCap":         ["Grey93",          "LightSkyBlue3",   "NONE"],
+      \ "SpellRare":        ["Grey93",          "DarkSeaGreen",    "NONE"],
+      \ "SpellLocal":       ["Grey93",          "LightGoldenrod3", "NONE"],
+      \ "DiffAdd":          ["Grey15",          "CadetBlue",       "NONE"],
+      \ "DiffAdded":        ["CadetBlue",       "NONE",            "NONE"],
+      \ "DIffChange":       ["Grey15",          "SteelBlue",       "NONE"],
+      \ "DiffDelete":       ["Grey15",          "IndianRed2",      "NONE"],
+      \ "DiffText":         ["Grey15",          "LightGoldenrod3", "NONE"],
+      \ "DiffRemoved":      ["IndianRed2",      "NONE",            "NONE"],
+      \ "Directory":        ["DarkSeaGreen",    "NONE",            "NONE"],
+      \ "Comment":          ["Grey42",          "NONE",            "NONE"],
+      \ "Ignore":           ["Grey35",          "NONE",            "NONE"],
+      \ "Title":            ["DarkSeaGreen",    "NONE",            "NONE"],
+      \ "Underlined":       ["SteelBlue1",      "NONE",            "UNDERLINE"],
+      \ "Constant":         ["LightGoldenrod3", "NONE",            "NONE"],
+      \ "Number":           ["LightSalmon3",    "NONE",            "NONE"],
+      \ "Identifier":       ["DarkSeaGreen",    "NONE",            "NONE"],
+      \ "Statement":        ["IndianRed1",      "NONE",            "NONE"],
+      \ "Label":            ["RosyBrown",       "NONE",            "NONE"],
+      \ "Keyword":          ["DarkSeaGreen",    "NONE",            "NONE"],
+      \ "Operator":         ["Grey89",          "NONE",            "NONE"],
+      \ "PreProc":          ["Grey74",          "NONE",            "NONE"],
+      \ "Type":             ["LightSkyBlue3",   "NONE",            "NONE"],
+      \ "StorageClass":     ["SteelBlue",       "NONE",            "NONE"],
+      \ "Special":          ["LightSlateGrey",  "NONE",            "NONE"],
+      \ "Tag":              ["NONE",            "NONE",            "UNDERLINE"],
+      \ "Delimiter":        ["Grey58",          "NONE",            "NONE"],
+      \ "Error":            ["Grey93",          "IndianRed2",      "NONE"],
+      \ "Todo":             ["Grey15",          "LightGoldenrod3", "NONE"]
+      \}
 
-" Status line
-" ------------------------------------------------------------------------------
-hi ErrorMsg			ctermfg=167		ctermbg=NONE	cterm=NONE		guifg=#d75f5f	guibg=NONE		gui=NONE
-hi ModeMsg			ctermfg=250		ctermbg=NONE	cterm=BOLD		guifg=#bcbcbc	guibg=NONE		gui=BOLD
-hi Question			ctermfg=110		ctermbg=NONE	cterm=NONE		guifg=#87afd7	guibg=NONE		gui=NONE
-hi StatusLine		ctermfg=234		ctermbg=247		cterm=NONE		guifg=#1c1c1c	guibg=#9e9e9e	gui=NONE
-hi StatusLineNC		ctermfg=248		ctermbg=238		cterm=NONE		guifg=#a8a8a8	guibg=#444444	gui=NONE
+let s:links = {
+      \ "CursorColumn":    ["CursorLine", "ColorColumn"],
+      \ "Normal":          ["FoldColumn"],
+      \ "LineNr":          ["NonText", "SpecialKey", "VertSplit"],
+      \ "ModeMsg":         ["MoreMsg"],
+      \ "StatusLine":      ["TablineSel"],
+      \ "StatusLineNC":    ["Tabline", "TablineFill"],
+      \ "Constant":        ["Boolean", "String"],
+      \ "Number":          ["Character", "Float"],
+      \ "Identifier":      ["Function"],
+      \ "Statement":       ["Conditional", "Repeat"],
+      \ "PreProc":         ["Define", "Include", "Macro", "PreCondit"],
+      \ "Type":            ["Structure", "Typedef"],
+      \ "Special":         ["SpecialChar", "SpecialComment", "Debug"]
+      \}
 
-hi StatusLineTerm	ctermfg=234		ctermbg=108		cterm=NONE		guifg=#1c1c1c	guibg=#87af87	gui=NONE
-hi StatusLineTermNC	ctermfg=108		ctermbg=238		cterm=NONE		guifg=#87af87	guibg=#444444	gui=NONE
-hi WarningMsg		ctermfg=222		ctermbg=NONE	cterm=NONE		guifg=#ffd787	guibg=NONE		gui=NONE
+function! s:Highlight(group, fg, bg, attr)
+  let cmd = "hi " . a:group
+  let cmd .= " ctermfg=" . s:colors[a:fg][0] . " ctermbg=" . s:colors[a:bg][0]
+  let cmd .= " cterm=" . a:attr
+  let cmd .= " guifg=" . s:colors[a:fg][1] . " guibg=" . s:colors[a:bg][1]
+  let cmd .= " gui=" . a:attr
+  execute cmd
+endfunction
 
-hi! link MoreMsg ModeMsg
+function! s:Link(from, to)
+  let cmd = "hi! link " . a:from . " " . a:to
+  execute cmd
+endfunction
 
-" Tab line
-" ------------------------------------------------------------------------------
-hi! link TabLineSel		StatusLine
-hi! link TabLine		StatusLineNC
-hi! link TabLineFill	TabLine
+for key in keys(s:highlights)
+  call s:Highlight(
+        \key, s:highlights[key][0], s:highlights[key][1], s:highlights[key][2])
+endfor
 
-" Popup menu
-" ------------------------------------------------------------------------------
-hi Pmenu			ctermfg=250		ctermbg=237		cterm=NONE		guifg=#bcbcbc	guibg=#3a3a3a	gui=NONE
-hi PmenuSel			ctermfg=237		ctermbg=250		cterm=NONE		guifg=#3a3a3a	guibg=#bcbcbc	gui=NONE
-hi PmenuSbar		ctermfg=NONE	ctermbg=237		cterm=NONE		guifg=NONE		guibg=#3a3a3a	gui=NONE
-hi PmenuThumb		ctermfg=NONE	ctermbg=238		cterm=NONE		guifg=NONE		guibg=#444444	gui=NONE
-
-" Wildmenu
-" ------------------------------------------------------------------------------
-hi Wildmenu			ctermfg=250		ctermbg=238		cterm=NONE		guifg=#bcbcbc	guibg=#444444	gui=NONE
-
-" Higlights
-" ------------------------------------------------------------------------------
-hi Search			ctermfg=NONE	ctermbg=NONE	cterm=REVERSE	guifg=NONE		guibg=NONE		gui=REVERSE
-hi IncSearch		ctermfg=235		ctermbg=231		cterm=NONE		guifg=#262626	guibg=#ffffff	gui=NONE
-hi MatchParen		ctermfg=250		ctermbg=245		cterm=NONE		guifg=#bcbcbc	guibg=#8a8a8a	gui=NONE
-hi SpellBad			ctermfg=255		ctermbg=173		cterm=NONE		guifg=#eeeeee	guibg=#d7875f	gui=NONE
-hi SpellCap			ctermfg=255		ctermbg=110		cterm=NONE		guifg=#eeeeee	guibg=#87afd7	gui=NONE
-hi SpellRare		ctermfg=255		ctermbg=108		cterm=NONE		guifg=#eeeeee	guibg=#87af87	gui=NONE
-hi SpellLocal		ctermfg=255		ctermbg=222		cterm=NONE		guifg=#eeeeee	guibg=#ffd787	gui=NONE
-
-" Diff mode
-" ------------------------------------------------------------------------------
-hi DiffAdd			ctermfg=235		ctermbg=72		cterm=NONE		guifg=#262626	guibg=#5faf87	gui=NONE
-hi DiffAdded		ctermfg=72		ctermbg=NONE	cterm=NONE		guifg=#5faf87	guibg=NONE		gui=NONE
-hi DIffChange		ctermfg=235		ctermbg=67		cterm=NONE		guifg=#262626	guibg=#5f87af	gui=NONE
-hi DiffDelete		ctermfg=235		ctermbg=167		cterm=NONE		guifg=#262626	guibg=#d75f5f	gui=NONE
-hi DiffText			ctermfg=235		ctermbg=222		cterm=NONE		guifg=#262626	guibg=#ffd787	gui=NONE
-hi DiffRemoved		ctermfg=167		ctermbg=NONE	cterm=NONE		guifg=#d75f5f	guibg=NONE		gui=NONE
-
-" Listing
-" ------------------------------------------------------------------------------
-hi Directory		ctermfg=108		ctermbg=NONE	cterm=NONE		guifg=#87af87	guibg=NONE		gui=NONE
-
-" Syntax
-" ------------------------------------------------------------------------------
-hi Comment			ctermfg=242		ctermbg=NONE	cterm=NONE		guifg=#6c6c6c	guibg=NONE		gui=NONE
-hi Ignore			ctermfg=240		ctermbg=NONE	cterm=NONE		guifg=#585858	guibg=NONE		gui=NONE
-hi Title			ctermfg=108		ctermbg=NONE	cterm=NONE		guibg=#87af87	guibg=NONE		gui=NONE
-hi Underlined		ctermfg=81		ctermbg=NONE	cterm=UNDERLINE	guibg=#5fd7ff	guibg=NONE		gui=UNDERLINE
-
-" Syntax constants
-" ------------------------------------------------------------------------------
-hi Constant			ctermfg=222		ctermbg=NONE	cterm=NONE		guifg=#ffd787	guibg=NONE		gui=NONE
-hi Number			ctermfg=173		ctermbg=NONE	cterm=NONE		guifg=#d7875f	guibg=NONE		gui=NONE
-
-hi! link Boolean		Constant
-hi! link String			Constant
-hi! link Character		Number
-hi! link Float			Number
-
-" Syntax identifiers
-" ------------------------------------------------------------------------------
-hi Identifier		ctermfg=108		ctermbg=NONE	cterm=NONE		guifg=#87af87	guibg=NONE		gui=NONE
-
-hi! link Function		Identifier
-
-" Syntax statements
-" ------------------------------------------------------------------------------
-hi Statement		ctermfg=131		ctermbg=NONE	cterm=NONE		guifg=#af5f5f	guibg=NONE		gui=NONE
-hi Label			ctermfg=138		ctermbg=NONE	cterm=NONE		guifg=#af8787	guibg=NONE		gui=NONE
-hi Keyword			ctermfg=108		ctermbg=NONE	cterm=NONE		guifg=#87af87	guibg=NONE		gui=NONE
-hi Operator			ctermfg=254		ctermbg=NONE	cterm=NONE		guifg=#e4e4e4	guibg=NONE		gui=NONE
-
-hi! link Conditional	Statement
-hi! link Repeat			Statement
-
-" Syntax preprocessors
-" ------------------------------------------------------------------------------
-hi PreProc			ctermfg=250		ctermbg=NONE	cterm=NONE		guifg=#bcbcbc	guibg=NONE		gui=NONE
-
-hi! link Define			PreProc
-hi! link Include		PreProc
-hi! link Macro			PreProc
-hi! link PreCondit		PreProc
-
-" Syntax types
-" ------------------------------------------------------------------------------
-hi Type				ctermfg=110		ctermbg=NONE	cterm=NONE		guifg=#87afd7	guibg=NONE		gui=NONE
-hi StorageClass		ctermfg=67		ctermbg=NONE	cterm=NONE		guifg=#5f87af	guibg=NONE		gui=NONE
-
-hi! link Structure		Type
-hi! link Typedef		Type
-
-" Syntax Specials
-" ------------------------------------------------------------------------------
-hi Special			ctermfg=103		ctermbg=NONE	cterm=NONE		guifg=#8787af	guibg=NONE		gui=NONE
-hi Tag				ctermfg=NONE	ctermbg=NONE	cterm=UNDERLINE	guifg=NONE		guibg=NONE		gui=UNDERLINE
-hi Delimiter		ctermfg=246		ctermbg=NONE	cterm=NONE		guifg=#949494	guibg=NONE		gui=NONE
-
-hi! link SpecialChar	Special
-hi! link SpecialComment	Special
-hi! link Debug			Special
-
-" Syntax highlights
-" ------------------------------------------------------------------------------
-hi Error			ctermfg=255		ctermbg=167		cterm=NONE		guifg=#eeeeee	guibg=#d75f5f	gui=NONE
-hi Todo				ctermfg=235		ctermbg=222		cterm=NONE		guifg=#eeeeee	guibg=#ffd787	gui=NONE
+for key in keys(s:links)
+  for itm in s:links[key]
+    call s:Link(itm, key)
+  endfor
+endfor
